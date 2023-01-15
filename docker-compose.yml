@@ -1,0 +1,12 @@
+---
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: maintenance_cont
+    command: python3 manage.py runserver 0:80
+    ports:
+      - 80:80
